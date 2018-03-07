@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlappyBrid</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html,body,canvas{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        canvas{
+            display: block;
+            margin:0 auto;
+            background: skyblue;
+        }
+    </style>
+</head>
+<script src="js/underscore-min.js"></script>
+<script src="js/simple-inheritence.js"></script>
+<script src="js/FrameUtil.js"></script>
+<script src="js/StaticSourceUtil.js"></script>
+<script src="js/Background.js"></script>
+<script src="js/Pipe.js"></script>
+<script src="js/Bird.js"></script>
+<script src="js/Game.js"></script>
+<body>
+<canvas id="canvas" width="900" height="600" style="border: 1px solid #000;"></canvas>
+
+<script>
+    var game=new Game({
+        fps:50,//检测机子最大帧数性能传-1
+        canvasId:'canvas'
+    });
+
+    document.getElementById('canvas').width=document.documentElement.clientWidth;
+    document.getElementById('canvas').height=document.documentElement.clientHeight;
+
+</script>
+</body>
+</html>
